@@ -1,6 +1,6 @@
 /* style.css */
 body {
-  font-family: system-ui, sans-serif;
+  font-family: "Roboto", sans-serif !important;
   background-color: #fafafa;
   color: #333;
   margin: 0;
@@ -14,9 +14,16 @@ header {
   border-bottom: 2px solid #cbd5e1;
 }
 
+
 .logo {
-  height: 80px;
+  width: 250px;       /* Breite anpassen, z.B. 150px */
+  height: auto;       /* proportional skalieren */
+  position: absolute; /* oben links auf der Seite */
+  top: -0.8rem;          /* Abstand vom oberen Rand */
+  left: 1rem;         /* Abstand vom linken Rand */
+  z-index: 1000;      /* sicherstellen, dass Logo über anderen Elementen liegt */
 }
+
 
 .main-image {
   width: 80%;
@@ -32,14 +39,14 @@ h1, h2 {
 
 section {
   margin: 2rem auto;
-  max-width: 600px;
+  max-width: 900px;
   background: white;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 1px 5px rgba(0,0,0,0.1);
 }
 
-footer {
+footer {    
   background-color: #f0f0f0;
   padding: 1rem;
   font-size: 0.9rem;
@@ -51,6 +58,21 @@ footer a {
 }
 footer a:hover {
   text-decoration: underline;
+}
+
+.highlight-orange{
+  color: #FF4500; 
+  font-weight: bold;  
+  font-size: 1.2em;
+}
+
+.intro p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  white-space: normal;      /* erlaubt Zeilenumbrüche */
+  word-break: break-word;   /* bricht lange "Wörter", wenn nötig */
+  overflow-wrap: anywhere;  /* noch feinere Kontrolle für Browserkompatibilität */
+  text-align: justify;      /* optional – schöner Blocksatz */
 }
 
 img {
